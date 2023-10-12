@@ -8,7 +8,7 @@
 <?php wp_head(); ?>
 <body>
     
-<header>
+<header class="header-blog">
     <h2>Blog</h2>
     <nav>
       <ul>
@@ -55,7 +55,7 @@
             </div>
           </div>
     </main>
-  <footer>
+  <footer class="footer-blog">
     <h2>Footer</h2>
   </footer>
   <?php wp_footer(); ?>

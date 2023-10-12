@@ -9,12 +9,7 @@
     --corterciaria: #3e6b48;
     --corquarciaria: #b5b479;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
-    background-color: #f1f1f1;
-}
-header{
+header.header-blog{
     padding: 38px;
     font-size: 40;
     text-align: center;
@@ -64,9 +59,10 @@ nav ul li a:hover{
     display: table;
     clear: both;
 }
-footer{
+footer.footer-blog{
     padding: 20px;
     text-align: center;
+    color: #fff;
     background-color: var(--corbtm);
     margin-top: 20px;
 }
