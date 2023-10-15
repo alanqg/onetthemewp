@@ -2,10 +2,13 @@
         <div class="container-footer">
             <div class="copyright">Copyright</div>
             <nav class="footer">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
+              <?php 
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'menu_footer'
+                    )
+                );
+              ?>
             </nav>
         </div>
     </footer>

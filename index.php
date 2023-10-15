@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,17 +12,22 @@
 <header class="header-blog">
     <h2>Blog</h2>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
+   <?php
+      wp_nav_menu(
+         array(
+            'theme_location' => 'menu_principal'
+         )
+      )
+
+   ?>
     </nav>
 </header>
     <main>
         <div class="row">
             <div class="leftcolumn">
               <div class="card">
+
+
                 <h2>Primeiro Titulo</h2>
                 <h5>Autor, Dec 7, 2023</h5>
                 <div class="fakeimg" style="height:200px;">Image</div>
@@ -36,6 +42,8 @@
                 <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
               </div>
             </div>
+
+            
             <div class="rightcolumn">
               <div class="card">
                 <h2>Sobre Nos</h2>
