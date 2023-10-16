@@ -26,24 +26,21 @@
         <div class="row">
             <div class="leftcolumn">
               <div class="card">
+              <?php 
 
+                    $featured = new WP_Query( 'post_type=post&posts_per_page=2&cat=3,6' );
 
-                <h2>Primeiro Titulo</h2>
-                <h5>Autor, Dec 7, 2023</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Pequeno texto...</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    if( $featured->have_posts() ):
+                      while( $featured->have_posts() ): $featured->the_post();
+                    ?>
+
+               <?php get_template_part( 'template-parts/content', 'destaque', get_post_format() ); ?>
               </div>
-              <div class="card">
-                <h2>Titilo Segundo Posts</h2>
-                <h5>Autor, Dec 7, 2023</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Pequeno texto...</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-              </div>
-            </div>
-
-            
+              <?php
+										endwhile;
+										wp_reset_postdata();
+									endif;
+                  ?>
             <div class="rightcolumn">
               <div class="card">
                 <h2>Sobre Nos</h2>

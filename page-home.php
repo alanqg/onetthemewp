@@ -3,7 +3,7 @@
 
 <section class="banner" id="fotobanner">
     <h2>Desenvolvimento Web</h2>
-     <a href="blog.html">Blog</a>
+     <a href="http://localhost/sites/hospesites/blog/">Blog</a>
 </section>
 
 <section class="sobre" id="sobre">
